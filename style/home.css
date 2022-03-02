@@ -1,0 +1,178 @@
+
+    h2{
+        color: #009688;
+        font-size: 37px;
+        font-weight: 700;
+        margin-left: 128px;
+    }
+    
+    .features-container{
+        height: 712px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .features-container-info{
+        width: 30%;
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 5% 10% 0;
+    }
+    
+    .features-container-info h1{
+        color: #FF4081;
+        font-size: 60px;
+        font-weight: 700;
+        margin: 0;
+    }
+    
+    .features-container-info p{
+        color: #555555;
+        font-size: 27px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    .features-container a{
+        text-decoration: none;
+        text-align: center;
+        color: #FF4081;
+        font-size: 27px;
+        font-weight: 400;
+        border: 2px solid #FF4081;
+        border-radius: 62px;
+        padding: 10px 10%;
+        transition: 300ms;
+    }
+    
+    .features-container a:hover{
+        color: #FFF;
+        background-color: #FF4081;
+    }
+    
+    .curses-container{
+        height: 730px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #F7F7F7;
+    }
+    
+    .curses-container-content{
+        width: 344px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center
+    }
+    
+    .curses-container-content img{
+        height: 270px;
+        margin: 10px;
+    }
+    
+    .curses-container-content h3{
+        color: #FF4081;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .curses-container-content p{
+        color: #000000;
+        font-size: 17px;
+        font-weight: 300;
+    }
+    
+    .curses-container-content a {
+        text-decoration: none;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: #FF4081;
+        border-radius: 62px;
+        padding: 15px 40px
+    }
+    
+    .depo-list{
+        height: 701px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .depo-list-box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .depo-list-box-id{
+        width: 495px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .text-user{
+        color: #000000;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+    .user-name{
+        font-weight: 400px;
+    }
+    
+    .more-content{
+        height: 730px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #F7F7F7;
+    }
+    
+    .flex-content{
+        display: flex;
+        justify-content: space-evenly ;
+    }
+    
+    .more-content-content{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    
+    .more-content-content h3{
+        color: #009688;
+        font-size: 27px;
+        font-weight: 700;
+        margin: 0;
+    }
+    
+    .btn-todos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-todos a{
+        text-decoration: none;
+        text-align: center;
+        color: #FF4081;
+        font-size: 25px;
+        font-weight: 400;
+        border: 2px solid #FF4081;
+        border-radius: 62px;
+        padding: 10px 25px;
+        transition: 300ms;
+    }
+    
+    .btn-todos a:hover{
+        color: #FFF;
+        background-color: #FF4081;

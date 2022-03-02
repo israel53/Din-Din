@@ -1,0 +1,106 @@
+.postagem{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 111px;
+}
+.title{
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.title h1{
+    color: #FF4081;
+    font-size: 50px;
+    font-weight: 500;
+    margin: 111px 0px 0px 0px;
+}
+
+.title time{
+    color: #9D9D9D;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.postagem figure{
+    width: 100%;
+}
+
+.postagem figure img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.texto{
+    margin-bottom: 40px;
+}
+
+.texto h3{
+    color: #009688;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.texto p{
+    color: #000000;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.cursos{
+    height: 800px;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cursos h2{
+    color: #FF4081;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.cursos-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.curso-resumo{
+    width: 344px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center
+}
+
+.curso-resumo img{
+    height: 270px;
+    margin: 10px;
+}
+
+.curso-resumo h3{
+    color: #FF4081;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.curso-resumo p{
+    color: #000000;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.curso-resumo a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #FF4081;
+    border-radius: 62px;
+    padding: 15px 40px
+}
