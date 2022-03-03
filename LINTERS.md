@@ -3,7 +3,8 @@
 ### TODO
 
 1. [x] [ESLint](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#eslint-com-typescriptreact)
-2. [ ] PHPCSFixer
+2. [x] [EditorConfig](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#editorconfig)
+3. [ ] PHPCSFixer
 
 ## ESLint (com TypeScript/React)
 
@@ -98,4 +99,30 @@ e habilitar essas configurações para que, ao salvar um arquivo, o ESLint já o
     "javascript.updateImportsOnFileMove.enabled": "always",
     "eslint.alwaysShowStatus": true
 }
+```
+
+## [EditorConfig](https://editorconfig.org/)
+
+Uma ferramente legal de se usar é o EditorConfig. É basicamente um arquivo que define algumas configurações do seu editor de código para lidar com formação dos arquivos. Excelente para projetos onde os desenvolvedores possuem configurações diferentes por padrões em seus editores ou utilizam editores diferentes. Hoje, a grande maioria dos editores possuem essa integração e, dependendo, não é necessário utilizar nenhum plugin/extensão.
+
+### Configuração padrão
+
+```yaml
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{tsx,jsx,ts,js}]
+indent_size = 2
+
+[*.php]
+indent_size = 4
 ```
