@@ -1,11 +1,11 @@
 # Configuração de linters
 
-### TODO
+### Índice
 
 1. [x] [ESLint (com TypeScript/React)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#eslint-com-typescriptreact)
 2. [x] [ESLint (com TypeScript)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#eslint-com-typescript)
 3. [x] [EditorConfig](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#editorconfig)
-4. [ ] PHPCSFixer
+4. [x] [PHPCSFixer](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#php-coding-standards-fixer)
 
 ## ESLint (com TypeScript/React)
 
@@ -180,4 +180,74 @@ indent_size = 2
 
 [*.php]
 indent_size = 4
+```
+
+## PHP Coding Standards Fixer
+
+Esta ferramenta é utilizada para manter um padrão nos códigos PHP. O bacana é que possui algumas configurações já predefinidas que permitem
+utilizar os padrões como os de PSRs.
+
+### Instalação
+
+Instale-a via [Composer](https://getcomposer.org):
+
+```console
+composer require friendsofphp/php-cs-fixer --dev
+```
+
+### Configuração padrão
+
+Crie um arquivo, no diretório ```tools/php-cs-fixer``` chamado ```.php-cs-fixer.php```:
+
+```php
+<?php
+
+$finder = PhpCsFixer\Finder::create()
+    ->exclude(['vendor'])
+    ->in(__DIR__)
+;
+
+$config = new PhpCsFixer\Config();
+return $config->setRules([
+        '@PSR12' => true,
+        'array_syntax' => ['syntax' => 'short'],
+        'function_typehint_space' => true,
+        'magic_method_casing' => true,
+        'magic_constant_casing' => true,
+        'native_function_casing' => true,
+        'no_blank_lines_after_phpdoc' => true,
+        'no_unneeded_curly_braces' => true,
+        'no_useless_return' => true,
+        'standardize_not_equals' => true,
+        'trim_array_spaces' => true,
+        'visibility_required' => ['elements' => [
+            'property',
+            'method',
+        ]],
+        'yoda_style' => true,
+        'whitespace_after_comma_in_array' => true,
+        'trailing_comma_in_multiline' => true,
+    ])
+    ->setFinder($finder)
+;
+```
+
+Após isso, configure, em seu ```composer.json```, comandos para rodá-lo em seu projeto:
+
+```json
+{
+    "scripts": {
+        "check-style": "php-cs-fixer fix --diff --verbose --dry-run .",
+        "fix-style": "php-cs-fixer fix ." 
+    }
+}
+```
+1. ```check-style```: o a ferramenta, é descrito as verificações que foram feitas, mas nenhuma correção é aplicada
+2. ```fix-style```: aplica correções
+
+Para rodar os comandos, utilize o Composer:
+
+```console
+composer check-style
+composer fix-style
 ```
