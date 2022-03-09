@@ -1,11 +1,12 @@
 # Configuração de linters
 
-### Índice
+### TODO
 
 1. [x] [ESLint (com TypeScript/React)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#eslint-com-typescriptreact)
 2. [x] [ESLint (com TypeScript)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#eslint-com-typescript)
 3. [x] [EditorConfig](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#editorconfig)
 4. [x] [PHPCSFixer](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md#php-coding-standards-fixer)
+5. [ ] CommitLint
 
 ## ESLint (com TypeScript/React)
 
