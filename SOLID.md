@@ -4,7 +4,7 @@
 
 1. [x] [S — Single Responsiblity Principle (Princípio da responsabilidade única)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#s--single-responsiblity-principle-princípio-da-responsabilidade-única)
 2. [x] [O — Open-Closed Principle (Princípio Aberto-Fechado)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#o--open-closed-principle-princípio-aberto-fechado)
-3. [ ] L — Liskov Substitution Principle (Princípio da substituição de Liskov)
+3. [x] [L — Liskov Substitution Principle (Princípio da substituição de Liskov)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#l---liskov-substitution-principle-princípio-da-substituição-de-liskov)
 4. [ ] I — Interface Segregation Principle (Princípio da Segregação da Interface)
 5. [ ] D — Dependency Inversion Principle (Princípio da inversão da dependência)
 
@@ -199,6 +199,74 @@ class AreaCalculator
         return array_reduce($this->shapes, function ($area, $shape) {
             return $area + $shape->getArea();
         }, 0);
+    }
+}
+```
+
+## L - Liskov Substitution Principle (Princípio da substituição de Liskov)
+
+O princípio diz que:
+
+> Seja S um subtipo de T. S deve pode realizar as mesmas ações de T sem causar problemas
+
+Ou seja, apenas utilize herança em objetos que **SÃO** a classe pai.
+
+### Exemplo de classe que fere o princípio
+
+A classe ```Human``` não deve extender a classe ```Dog```, mesmo ambas contendo, por exemplo, o método ```walk```, pois um humano não consegue balançar a calda, que é outro método da classe ```Dog```. Prefira herança de abstrações ou traits.
+
+```php
+class Dog
+{
+    public function wagTail()
+    {
+        echo 'Balançando a calda...';
+    }
+    
+    public function walk()
+    {
+        echo 'Andando...';
+    }
+}
+
+class Human extends Dog
+{
+    public function wagTail()
+    {
+        throw new LogicException('Um humano não possui calda');
+    }
+    
+    public function talk()
+    {
+        echo 'Falando...';
+    }
+}
+```
+
+### Exemplo refatorado
+
+```php
+abstract class Mamifer
+{
+    public function walk()
+    {
+        echo 'Andando...';
+    }
+}
+
+class Dog extends Mamifer
+{
+    public function wagTail()
+    {
+        echo 'Balançando a calda...';
+    }
+}
+
+class Human extends Mamifer
+{
+    public function talk()
+    {
+        echo 'Falando...';
     }
 }
 ```
