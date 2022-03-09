@@ -5,7 +5,7 @@
 1. [x] [S — Single Responsiblity Principle (Princípio da responsabilidade única)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#s--single-responsiblity-principle-princípio-da-responsabilidade-única)
 2. [x] [O — Open-Closed Principle (Princípio Aberto-Fechado)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#o--open-closed-principle-princípio-aberto-fechado)
 3. [x] [L — Liskov Substitution Principle (Princípio da substituição de Liskov)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#l---liskov-substitution-principle-princípio-da-substituição-de-liskov)
-4. [ ] I — Interface Segregation Principle (Princípio da Segregação da Interface)
+4. [x] [I — Interface Segregation Principle (Princípio da Segregação da Interface)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#i--interface-segregation-principle-princípio-da-segregação-da-interface)
 5. [ ] D — Dependency Inversion Principle (Princípio da inversão da dependência)
 
 ## S — Single Responsiblity Principle (Princípio da responsabilidade única)
@@ -268,6 +268,76 @@ class Human extends Mamifer
     {
         echo 'Falando...';
     }
+}
+```
+
+## I — Interface Segregation Principle (Princípio da Segregação da Interface)
+
+O princípio diz que
+
+> Uma classe nunca deve depender de uma interface que ela não utiliza e interfaces não devem depender de detalhes. Detalhes devem depender de interfaces.
+
+Quando uma classe depende de algo que ela não utiliza, é inútil e pode causar bugs inesperados.
+
+### Exemplo de classe que fere o princípio
+
+```php
+interface Teacher
+{
+    public function teachEnglish();
+    
+    public function teachHistory();
+}
+
+class EnglishTeacher implements Teacher
+{
+    public function teachEnglish()
+    {
+        echo 'Ensinando inglês...';
+    }
+    
+    public function teachHistory()
+    {
+        throw new DomainException('Não sei ensinar história');
+    }
+}
+
+class EnglishStudent
+{
+    public function __construct(
+        private Teacher $teacher
+    ) {}
+}
+```
+
+Não é necessário para um aluno de inglês que seu professor seja também um professor de história ou não, pois isso não interessa a ele.
+
+### Exemplo refatorado
+
+```php
+interface EnglishTeacher
+{
+    public function teachEnglish();
+}
+
+interface HistoryTeacher
+{
+    public function teachHistory();
+}
+
+class EnglishTeacher implements EnglishTeacher
+{
+    public function teachEnglish()
+    {
+        echo 'Ensinando inglês...';
+    }
+}
+
+class EnglishStudent
+{
+    public function __construct(
+        private EnglishTeacher $englishTeacher
+    ) {}
 }
 ```
 
