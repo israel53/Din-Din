@@ -127,9 +127,6 @@ Segue os mesmos princípios da configuração com React, porém com algumas modi
     "plugins": ["@typescript-eslint", "prettier"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
         "ecmaVersion": 2018,
         "sourceType": "module",
         "project": "./tsconfig.json"
