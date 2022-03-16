@@ -1,12 +1,12 @@
 # SOLID
 
-### TODO
+### Índice
 
 1. [x] [S — Single Responsiblity Principle (Princípio da responsabilidade única)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#s--single-responsiblity-principle-princípio-da-responsabilidade-única)
 2. [x] [O — Open-Closed Principle (Princípio Aberto-Fechado)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#o--open-closed-principle-princípio-aberto-fechado)
 3. [x] [L — Liskov Substitution Principle (Princípio da substituição de Liskov)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#l---liskov-substitution-principle-princípio-da-substituição-de-liskov)
 4. [x] [I — Interface Segregation Principle (Princípio da Segregação da Interface)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#i--interface-segregation-principle-princípio-da-segregação-da-interface)
-5. [ ] D — Dependency Inversion Principle (Princípio da inversão da dependência)
+5. [x] [D — Dependency Inversion Principle (Princípio da inversão da dependência)](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md#d--dependency-inversion-principle-princípio-da-inversão-da-dependência)
 
 ## S — Single Responsiblity Principle (Princípio da responsabilidade única)
 Classes devem ter somente uma responsabilidade. Quando se inicia em OOP, é comum
@@ -340,6 +340,99 @@ class EnglishStudent
     ) {}
 }
 ```
+
+## D — Dependency Inversion Principle (Princípio da inversão da dependência)
+
+O princípio diz que:
+
+> Tanto classes de baixo nível quanto de alto devem depender de abstrações, e não de implementações.
+
+Ou seja, uma classe não deve saber como algo é feito, e sim se pode ser feito.
+
+### Exemplo de classe que fere o princípio
+
+Um exemplo comum é um serviço depender de uma classe para lidar com banco de dados.
+
+```php
+class MySQLManager
+{
+    public function insert(string $table, array $data)
+    {
+         // ...
+    }
+    
+    public function delete(string $table, int $id)
+    {
+        // ...
+    }
+    
+    // ...
+}
+
+class UserService
+{
+    public function __construct(
+        private MySQLManager $dbManager
+    ) {}
+}
+```
+
+O problema é que não deveria importar a ```UserService``` qual tipo de banco de dados está sendo utilizado para fazer inserções, por exemplo. Se a aplicação migrasse de MySQL para PostgreSQL, por exemplo, o service teria que ser alterado.
+
+### Exemplo refatorado
+
+```php
+interface DatabaseManager
+{
+    /**
+     * @param string $context - Table para bancos de dados relacionais e collections, por exemplo, para não relacionais
+     * @param array  $data
+    */
+    public function insert(string $context, array $data);
+    
+    /**
+     * @param string $context - Table para bancos de dados relacionais e collections, por exemplo, para não relacionais
+     * @param mixed  $id
+    */
+    public function delete(string $context, $id);
+}
+
+class MySQLManager implements DatabaseManager
+{
+    public function insert(string $context, array $data)
+    {
+         // ...
+    }
+    
+    public function delete(string $context, $id)
+    {
+        // ...
+    }
+}
+
+
+class PostgreSQLManager implements DatabaseManager
+{
+    public function insert(string $context, array $data)
+    {
+         // ...
+    }
+    
+    public function delete(string $context, $id)
+    {
+        // ...
+    }
+}
+
+class UserService
+{
+    public function __construct(
+        private DatabaseManager $dbManager
+    ) {}
+}
+```
+
+Veja que agora não importa qual tipo de bancos de dados será utilizado porque a classe ```UserService``` depende de uma abstração de um gerenciador de banco de dados, e não de uma implementação.
 
 ## Recomendações de leitura
 
