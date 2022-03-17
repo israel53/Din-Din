@@ -35,13 +35,13 @@ naquele momento.
 
 ##### 2. Seguir a seguinte estrutura:
 
-```[type](?[module]): [description]```
+```[type](?[scope]): [description]```
 
 - ```type```: o tipo do commit:
   - ```fix```: para correções
   - ```refact```: para refatorações, ou seja, mudanças que não afetam o comportamento do código
   - ```feat```: para adições de novas features
-- ```module``` (opcional): o módulo da aplicação que será afetado.
+- ```scope``` (opcional): o scopo da aplicação que será afetado. Pode ser informado o ID de uma tarefa (do Azure, por exemplo). Caso seja informado um escopo (ex.: ```auth```) e o ID da tarefa, separá-los por vírgula e colocar o ID no fim (ex.: ```fix(auth, 123): ...```).
 - ```description```: descrição breve do que feito feito no commit com a primeira letra minúscula
 
 #### Exemplo:
