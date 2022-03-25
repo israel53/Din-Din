@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/gabrieljmj/devio-dev-doc/blob/main/images/devio.webp?raw=true" />
+  <img src="https://github.com/deviobr/code-patterns/blob/main/images/devio.webp?raw=true" />
 </p>
 
 <h1 align="center">Documentação de padrões de código</h1>
@@ -10,8 +10,8 @@
 
 ## Índice
 
-1. [SOLID](https://github.com/gabrieljmj/devio-dev-doc/blob/main/SOLID.md)
-2. [Linters](https://github.com/gabrieljmj/devio-dev-doc/blob/main/LINTERS.md)
-4. [Gitflow](https://github.com/gabrieljmj/devio-dev-doc/blob/main/GITFLOW.md)
-5. [Testes Automatizados](https://github.com/gabrieljmj/devio-dev-doc/blob/main/TESTS.md)
-6. [Documentação API](https://github.com/gabrieljmj/devio-dev-doc/blob/main/API-DOCS.md)
+1. [SOLID](https://github.com/deviobr/code-patterns/blob/main/SOLID.md)
+2. [Linters](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md)
+4. [Gitflow](https://github.com/deviobr/code-patterns/blob/main/GITFLOW.md)
+5. [Testes Automatizados](https://github.com/deviobr/code-patterns/blob/main/TESTS.md)
+6. [Documentação API](https://github.com/deviobr/code-patterns/blob/main/API-DOCS.md)
