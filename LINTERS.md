@@ -10,7 +10,7 @@
 
 ## ESLint (com TypeScript/React)
 
-Será usado, como base, o padrão criar pelo AirBnb, porém com modificações, desabilitando ou modificando algumas regras.
+Será usado, como base, o padrão criado pelo Airbnb, porém com modificações, desabilitando e modificando algumas regras.
 
 ### Regras desabilitadas
 
@@ -19,7 +19,7 @@ Será usado, como base, o padrão criar pelo AirBnb, porém com modificações, 
 3. Obrigatoriedade de um ```export default``` em arquivos.
 4. Obrigatoriedade de declarar variáveis com nomes diferentes quando existe uma variável com mesmo nome no escopo que as contém.
 5. Obrigatoriedade em não utilizar spreading operator em propriedades de componentes.
-6. Não utilização de global importa. Necessário para alguns módulos como ```date-fns``` para i18n (internacionalização).
+6. Não utilização de global imports. Necessário para alguns módulos como ```date-fns``` para i18n (internacionalização).
 
 ### Instalação
 
@@ -92,8 +92,8 @@ npm i typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser pret
 
 ### Extensão de VSCode
 
-É interessante ter instalado no VSCode a
-[extensão do ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) também
+É necessário também ter instalado no VSCode a
+[extensão do ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 e habilitar essas configurações para que, ao salvar um arquivo, o ESLint já o corrija:
 
 ```json
@@ -113,7 +113,7 @@ e habilitar essas configurações para que, ao salvar um arquivo, o ESLint já o
 
 ## ESlint (com TypeScript)
 
-Segue os mesmos princípios da configuração com React, porém com algumas modificações para remover plugins do ESLint relacionadois ao framework:
+Segue os mesmos princípios da configuração com React, porém com algumas modificações para remover plugins do ESLint relacionados ao framework:
 
 ```json
 {
@@ -156,7 +156,7 @@ Segue os mesmos princípios da configuração com React, porém com algumas modi
 
 ## [EditorConfig](https://editorconfig.org/)
 
-Uma ferramente legal de se usar é o EditorConfig. É basicamente um arquivo que define algumas configurações do seu editor de código para lidar com formação dos arquivos. Excelente para projetos onde os desenvolvedores possuem configurações diferentes por padrões em seus editores ou utilizam editores diferentes. Hoje, a grande maioria dos editores possuem essa integração e, dependendo, não é necessário utilizar nenhum plugin/extensão.
+Uma ferramenta legal de se usar é o EditorConfig. É basicamente um arquivo que define algumas configurações do seu editor de código para lidar com formação dos arquivos. Excelente para projetos onde os desenvolvedores possuem configurações diferentes por padrões em seus editores ou utilizam editores diferentes. Hoje, a grande maioria dos editores possuem essa integração e, dependendo, não é necessário utilizar nenhum plugin/extensão.
 
 ### Configuração padrão
 
@@ -182,8 +182,7 @@ indent_size = 4
 
 ## PHP Coding Standards Fixer
 
-Esta ferramenta é utilizada para manter um padrão nos códigos PHP. O bacana é que possui algumas configurações já predefinidas que permitem
-utilizar os padrões como os de PSRs.
+Esta ferramenta é utilizada para manter um padrão nos códigos PHP. O bacana é que possui algumas configurações já predefinidas que permitem utilizar os padrões como os de PSRs.
 
 ### Instalação
 

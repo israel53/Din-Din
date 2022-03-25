@@ -7,7 +7,7 @@ Aqui não me estenderei explicando a importância de testes, mas indicarei algum
 ## Dicas
 
 1. Tente desenvolver o máximo de testes possíveis, mas principalmente para regras de negócio específicas de um projeto.
-2. Escreva os testes antes da implementação. Desenvolvendo o teste antes, e ele falhando, faz a solução ser desenvolvida. Docontrário, você pode acabar por desenvolver os testes baseados no que foi desenvolvido podendo conter falhas.
+2. Escreva os testes antes da implementação. Desenvolvendo o teste antes, e ele falhando, faz a solução ser desenvolvida. Do contrário, você pode acabar por desenvolver os testes baseados no que foi desenvolvido podendo conter falhas.
 3. Tente manter os testes o mais limpos possíveis, assim podem servir também como uma documentação para outros desenvolvedores ou para você mesmo quando não se lembrar como utilizar uma parte do código.
 4. Foque em testes relacionados ao backend de seu projeto. O QA já estará realizando testes utilizando o frontend e poderá identificar as falhas. No backend isso complica um pouco.
 
@@ -25,4 +25,4 @@ Para JavaScript, a ferramenta padrão de testes será o [Jest](https://jestjs.io
 ### PHP
 
 1. [Testando aplicações Laravel com PHPUnit](https://laravel.com/docs/9.x/testing)
-2. [Testando aplicações Laravel com Pest](https://nunomaduro.com/using-pest-in-laravel/) - Excelente biblioteca contruída em cima do PHPUnit que permite a utilização de uma sintaxe parecida a de frameworks de testes JS.
+2. [Testando aplicações Laravel com Pest](https://nunomaduro.com/using-pest-in-laravel/) - Excelente biblioteca construída em cima do PHPUnit que permite a utilização de uma sintaxe parecida a de frameworks de testes JS.

@@ -14,7 +14,7 @@ vermos classes como um "repositório de funções" e, com isso, acabarmos por cr
 uma *GodClass*.
 
 Isso acaba por gerar problemas quando diversos lugares do código dependem dessa
-classe e, por vezes, uma modificação pode bugs em lugares inesperados.
+classe e, por vezes, uma modificação pode gerar bugs em lugares inesperados.
 
 ### Exemplo de classe que fere o princípio
 ```php
@@ -58,8 +58,7 @@ class UserService
 ```
 
 Veja que no exemplo, essa classe pode ser usada por um controller por exemplo,
-para executar ações de um CRUD, ou por uma view, ou por qualquer outra classe
-do projeto.
+para executar ações de um CRUD, por uma view ou por qualquer outra classe do projeto.
 
 ### Exemplo refatorado
 ```php
@@ -109,13 +108,10 @@ class UserViewer
 ```
 
 ## O — Open-Closed Principle (Princípio Aberto-Fechado)
-Um dos princípios que mais considero importante. Basicamente um classe deve ser
-fechada para modificações, e aberta para extensões. Isso ocorre por ser muito
-fácil, ao se modificar algo que já funciona bem, o fazer sem criar um bug.
+Um dos princípios que mais considero importante. Basicamente uma classe deve ser fechada para modificações, e aberta para extensões. Isso ocorre por ser muito fácil, ao se modificar algo que já funciona bem, o fazer sem criar um bug.
 
 ### Exemplo de classe que fere o princípio
-Um exemplo muito utilizado é o de cálculo de área de formas geométricas, onde
-cada forma tem sua particularidade.
+Um exemplo muito utilizado é o de cálculo de área de formas geométricas, onde cada forma tem sua particularidade.
 ```php
 class Square
 {
@@ -153,9 +149,7 @@ class AreaCalculator
 ```
 
 ### Exemplo refatorado
-Veja que, se decidirmos inserir um novo shape, teriamos que modificar a classe
-para suportá-lo. Mas, se dependermos de um interface relacionada às formas, não
-precisamos fazer isso:
+Veja que, se decidirmos inserir um novo shape, teríamos que modificar a classe para suportá-lo. Mas, se dependermos de um interface relacionada às formas, não precisamos fazer isso:
 
 ```php
 interface Shape
@@ -438,4 +432,3 @@ Veja que agora não importa qual tipo de bancos de dados será utilizado porque 
 
 1. [The SOLID Principles of Object-Oriented Programming Explained in Plain English](https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/)
 2. [DIP in the Wild](https://martinfowler.com/articles/dipInTheWild.html)
-3. ...
