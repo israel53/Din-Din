@@ -2,11 +2,11 @@
 
 ### Índice
 
-1. [x] [S — Single Responsiblity Principle (Princípio da responsabilidade única)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#s--single-responsiblity-principle-princípio-da-responsabilidade-única)
-2. [x] [O — Open-Closed Principle (Princípio Aberto-Fechado)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#o--open-closed-principle-princípio-aberto-fechado)
-3. [x] [L — Liskov Substitution Principle (Princípio da substituição de Liskov)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#l---liskov-substitution-principle-princípio-da-substituição-de-liskov)
-4. [x] [I — Interface Segregation Principle (Princípio da Segregação da Interface)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#i--interface-segregation-principle-princípio-da-segregação-da-interface)
-5. [x] [D — Dependency Inversion Principle (Princípio da inversão da dependência)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#d--dependency-inversion-principle-princípio-da-inversão-da-dependência)
+1. [S — Single Responsibility Principle (Princípio da responsabilidade única)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#s--single-responsibility-principle-princípio-da-responsabilidade-única)
+2. [O — Open-Closed Principle (Princípio Aberto-Fechado)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#o--open-closed-principle-princípio-aberto-fechado)
+3. [L — Liskov Substitution Principle (Princípio da substituição de Liskov)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#l---liskov-substitution-principle-princípio-da-substituição-de-liskov)
+4. [I — Interface Segregation Principle (Princípio da Segregação da Interface)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#i--interface-segregation-principle-princípio-da-segregação-da-interface)
+5. [D — Dependency Inversion Principle (Princípio da inversão da dependência)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#d--dependency-inversion-principle-princípio-da-inversão-da-dependência)
 
 ## S — Single Responsibility Principle (Princípio da responsabilidade única)
 Classes devem ter somente uma responsabilidade. Quando se inicia em OOP, é comum vermos classes como um "repositório de funções" e, com isso, acabarmos por criar uma *GodClass*.

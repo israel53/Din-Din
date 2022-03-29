@@ -1,12 +1,12 @@
 # Configuração de linters
 
-### TODO
+### Índice
 
-1. [x] [ESLint (com TypeScript/React)](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#eslint-com-typescriptreact)
-2. [x] [ESLint (com TypeScript)](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#eslint-com-typescript)
-3. [x] [EditorConfig](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#editorconfig)
-4. [x] [PHPCSFixer](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#php-coding-standards-fixer)
-5. [ ] CommitLint
+1. [ESLint (com TypeScript/React)](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#eslint-com-typescriptreact)
+2. [ESLint (com TypeScript)](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#eslint-com-typescript)
+3. [EditorConfig](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#editorconfig)
+4. [PHPCSFixer](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#php-coding-standards-fixer)
+5. CommitLint
 
 ## ESLint (com TypeScript/React)
 

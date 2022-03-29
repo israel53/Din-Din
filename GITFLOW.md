@@ -35,11 +35,11 @@ Outra coisa para se entender o que foi feito num commit é a padronização das 
   - ```fix```: para correções
   - ```refact```: para refatorações, ou seja, mudanças que não afetam o comportamento do código
   - ```feat```: para adições de novas features
-- ```scope``` (opcional): o escopo da aplicação que será afetado. Pode ser informado o ID de uma tarefa (do Azure, por exemplo). Caso seja informado um escopo (ex.: ```auth```) e o ID da tarefa, separá-los por vírgula e colocar o ID no fim (ex.: ```fix(auth, 123): ...```).
-- ```description```: descrição breve do que foi feito no commit com a primeira letra minúscula
+- ```scope``` (opcional): o escopo da aplicação que será afetado. Pode ser informado o ID de uma tarefa (do Azure, por exemplo). Caso seja informado um escopo (ex.: ```auth```) e o ID da tarefa, separá-los por vírgula e colocar o ID no fim (ex.: ```fix(auth, #123): ...```)
+- ```description```: descrição breve do que foi feito no commit com as primeiras letras minúsculas
 
 #### Exemplo:
 
 Adição de uma feature para exportação de relatórios em PDF em um módulo de pedidos:
 
-```feat(orders): add pdf order export``` 
+```feat(orders, #123): add pdf order export``` 
