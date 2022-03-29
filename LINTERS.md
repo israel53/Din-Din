@@ -23,7 +23,7 @@ Será usado, como base, o padrão criado pelo Airbnb, porém com modificações,
 
 ### Instalação
 
-Instalação da configuração do AirBnb:
+Instalação da configuração do Airbnb:
 
 ```console
 npx install-peerdeps --dev eslint-config-airbnb
@@ -239,7 +239,7 @@ Após isso, configure, em seu ```composer.json```, comandos para rodá-lo em seu
     }
 }
 ```
-1. ```check-style```: o a ferramenta, é descrito as verificações que foram feitas, mas nenhuma correção é aplicada
+1. ```check-style```: é descrito as verificações que foram feitas, mas nenhuma correção é aplicada
 2. ```fix-style```: aplica correções
 
 Para rodar os comandos, utilize o Composer:

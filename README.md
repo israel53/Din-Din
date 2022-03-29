@@ -2,7 +2,7 @@
   <img src="https://github.com/deviobr/code-patterns/blob/main/images/devio.webp?raw=true" />
 </p>
 
-<h1 align="center">Documentação de padrões de código</h1>
+<h1 align="center">Documentação de padrões e qualidade de código</h1>
 
 <p align="center">
   <sub>Documentação de padrões internos da Devio em relação à padronização de estilização de códigos, testes, utilização de Git e desenvolvimento de documentações.</sub>

@@ -8,13 +8,10 @@
 4. [x] [I — Interface Segregation Principle (Princípio da Segregação da Interface)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#i--interface-segregation-principle-princípio-da-segregação-da-interface)
 5. [x] [D — Dependency Inversion Principle (Princípio da inversão da dependência)](https://github.com/deviobr/code-patterns/blob/main/SOLID.md#d--dependency-inversion-principle-princípio-da-inversão-da-dependência)
 
-## S — Single Responsiblity Principle (Princípio da responsabilidade única)
-Classes devem ter somente uma responsabilidade. Quando se inicia em OOP, é comum
-vermos classes como um "repositório de funções" e, com isso, acabarmos por criar
-uma *GodClass*.
+## S — Single Responsibility Principle (Princípio da responsabilidade única)
+Classes devem ter somente uma responsabilidade. Quando se inicia em OOP, é comum vermos classes como um "repositório de funções" e, com isso, acabarmos por criar uma *GodClass*.
 
-Isso acaba por gerar problemas quando diversos lugares do código dependem dessa
-classe e, por vezes, uma modificação pode gerar bugs em lugares inesperados.
+Isso acaba por gerar problemas quando diversos lugares do código dependem dessa classe e, por vezes, uma modificação pode gerar bugs em lugares inesperados.
 
 ### Exemplo de classe que fere o princípio
 ```php
@@ -108,7 +105,7 @@ class UserViewer
 ```
 
 ## O — Open-Closed Principle (Princípio Aberto-Fechado)
-Um dos princípios que mais considero importante. Basicamente uma classe deve ser fechada para modificações, e aberta para extensões. Isso ocorre por ser muito fácil, ao se modificar algo que já funciona bem, o fazer sem criar um bug.
+Um dos princípios que mais considero importante. Basicamente uma classe deve ser fechada para modificações, e aberta para extensões. Isso ocorre por ser muito difícil, ao se modificar algo que já funciona bem, o fazer sem criar um bug.
 
 ### Exemplo de classe que fere o princípio
 Um exemplo muito utilizado é o de cálculo de área de formas geométricas, onde cada forma tem sua particularidade.
@@ -371,7 +368,7 @@ class UserService
 }
 ```
 
-O problema é que não deveria importar a ```UserService``` qual tipo de banco de dados está sendo utilizado para fazer inserções, por exemplo. Se a aplicação migrasse de MySQL para PostgreSQL, por exemplo, o service teria que ser alterado.
+O problema é que não é importante para a ```UserService``` qual tipo de banco de dados está sendo utilizado para fazer inserções, por exemplo. Se a aplicação migrasse de MySQL para PostgreSQL, por exemplo, o service teria que ser alterado.
 
 ### Exemplo refatorado
 
@@ -426,7 +423,7 @@ class UserService
 }
 ```
 
-Veja que agora não importa qual tipo de bancos de dados será utilizado porque a classe ```UserService``` depende de uma abstração de um gerenciador de banco de dados, e não de uma implementação.
+Veja que agora não importa qual tipo de banco de dados será utilizado porque a classe ```UserService``` depende de uma abstração de um gerenciador de banco de dados, e não de uma implementação.
 
 ## Recomendações de leitura
 
