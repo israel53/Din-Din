@@ -253,7 +253,7 @@ composer fix-style
 
 O CommitLint é uma ferramente para validarmos a estrutura de nosso commit. Para isso se tornar automático, utilizaremos um hook em nosso git para, assim que tentarmos criar um commit, essa validação seja feita de forma automática.
 
-### Instalção do CommitLint
+### Instalação do CommitLint
 
 Primeiro é necessário instalar as dependências:
 
