@@ -6,7 +6,7 @@
 2. [ESLint (com TypeScript)](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#eslint-com-typescript)
 3. [EditorConfig](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#editorconfig)
 4. [PHPCSFixer](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#php-coding-standards-fixer)
-5. CommitLint
+5. [CommitLint](https://github.com/deviobr/code-patterns/blob/main/LINTERS.md#commitlint)
 
 ## ESLint (com TypeScript/React)
 
@@ -248,3 +248,51 @@ Para rodar os comandos, utilize o Composer:
 composer check-style
 composer fix-style
 ```
+
+## CommitLint
+
+O CommitLint é uma ferramente para validarmos a estrutura de nosso commit. Para isso se tornar automático, utilizaremos um hook em nosso git para, assim que tentarmos criar um commit, essa validação seja feita de forma automática.
+
+### Instalação do CommitLint
+
+Primeiro é necessário instalar as dependências:
+
+```console
+yarn add @commitlint/config-conventional @commitlint/cli -D
+```
+
+e depois criar o arquivo de configuração (```commitlint.config.js```) com esse conteúdo:
+
+```js
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+};
+```
+
+### Instalação do Husky
+
+```console
+yarn add husky -D
+```
+
+Após isso, é necessário rodar o script de instalação do hook:
+
+```console
+yarn husky install
+```
+
+e, para que isso ocorra de forma automática após a instalação do projeto, adicione o seguinte script no ```package.json```:
+
+```json
+"scripts": {
+  "prepare": "husky install"
+}
+```
+
+agora, para o hook ser instalado:
+
+```console
+yarn husky add .husky/commit-msg 'yarn commitlint --edit $1'
+```
+
+Com isso, assim que um ```git commit -m "..."``` for rodado, a mensagem será validada e indicado os pontos que não seguem o padrão exigido.
